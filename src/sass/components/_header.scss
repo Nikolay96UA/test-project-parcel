@@ -1,16 +1,44 @@
-.nav{
-    display: flex;
-    justify-content: space-between;
-    background-color:#84A178;
-    ;
+.nav {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
 }
 
-.nav-menu{
-    background-color: transparent;
-    border: 0;
+.nav-menu {
+  background-color: transparent;
+  border: 0;
 }
 
-.nav-logo{
-    display: flex;
-    margin-top: 12px;
+.nav-logo {
+  display: flex;
+  margin-top: 12px;
+}
+
+.overlay {
+  height: 100%;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #84a178;
+  background-image: url(/src/images/bg-img-1.png),
+    url(/src/images/mobile-ice-cream.png);
+  background-size: 100%, 177px;
+
+  background-repeat: no-repeat;
+
+  background-position: 100% 100%, bottom center;
+
+  // @media screen and (min-width: 480px) {
+  //   background-image: url(/src/images/bg-hero-480.jpg);
+  // }
+
+  // @media screen and (min-width: 768px) {
+  //   background-image: url(/src/images/bg-hero-tablet.jpg);
+  // }
+
+  // @media screen and (min-width: 1200px) {
+  //   background-image: url(/src/images/bg-hero-desktop.jpg);
+  // }
 }
