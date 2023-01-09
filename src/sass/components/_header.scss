@@ -1,44 +1,132 @@
 .nav {
-  position: absolute;
+  background-color: var(--backgruond-color);
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
+  padding-top: 12px;
+
+  @media screen and (min-width:480px) {
+    padding-top: 14px;
+  }
+
+  @media screen and (min-width:768px) {
+    padding-top: 20px;
+  }
+
+  @media screen and (min-width:1200px) {
+    padding-top: 8px;
+  }
+
+}
+
+.nav-list {
+  display: none;
+
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    margin-right: 204px
+  }
+}
+
+.nav-items:not(:last-child) {
+  margin-right: 28px;
+}
+
+.nav-link {
+  padding-top: 40px;
+  padding-bottom: 13px;
+
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.25;
+  color: var(--white-text);
+
+  &:hover,
+  &:focus {
+    color: var(--btn-backgroundcolor);
+  }
 }
 
 .nav-menu {
   background-color: transparent;
   border: 0;
+
+  @media screen and (min-width: 768px) {
+    margin-right: 32px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    display: none;
+  }
+}
+
+.nav-content {
+  display: flex;
+  align-items: center;
 }
 
 .nav-logo {
   display: flex;
-  margin-top: 12px;
+  padding-top: 12px;
+  background-image: url(/src/images/logo.png);
+  width: 40px;
+  height: 37px;
+
+  @media screen and (min-width: 480px) {
+    padding-top: 14px;
+    width: 48px;
+    height: 44px;
+  }
+
+  @media screen and (min-width: 768px) {
+    padding-top: 20px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    padding-top: 8px;
+    background-image: url(/src/images/logo-desktop.png);
+    width: 60px;
+    height: 65px;
+  }
 }
 
-.overlay {
-  height: 100%;
-  width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  background-color: #84a178;
-  background-image: url(/src/images/bg-img-1.png),
-    url(/src/images/mobile-ice-cream.png);
-  background-size: 100%, 177px;
+.nav-logo__icon {
+  width: 40px;
+  height: 37px;
 
-  background-repeat: no-repeat;
+  @media screen and (min-width: 480px) {
+    width: 48px;
+    height: 44px;
+  }
 
-  background-position: 100% 100%, bottom center;
+  @media screen and (min-width: 1200px) {
+    width: 60px;
+    height: 65px;
+  }
+}
 
-  // @media screen and (min-width: 480px) {
-  //   background-image: url(/src/images/bg-hero-480.jpg);
-  // }
+.nav-btn {
+  display: none;
+  width: 152px;
+  height: 42px;
+  background-color: var(--btn-backgroundcolor);
+  border-radius: 10px;
+  border: 0;
 
-  // @media screen and (min-width: 768px) {
-  //   background-image: url(/src/images/bg-hero-tablet.jpg);
-  // }
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1.21;
 
-  // @media screen and (min-width: 1200px) {
-  //   background-image: url(/src/images/bg-hero-desktop.jpg);
-  // }
+  align-items: center;
+  text-align: center;
+
+  color: #000000;
+
+  @media screen and (min-width: 768px) {
+    display: block;
+  }
+
+ 
 }
